@@ -1,40 +1,90 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  min-height: 98vh;
+  background-color: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  font-size: 40px;
 }
- */
+
+.nav-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 75px;
+}
+
+.nav-bar {
+  display: flex;
+}
+
+.nav-bar-item {
+  list-style: none;
+  margin-left: 25px;
+}
+
+.nav-bar-item-link {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-title {
+  margin-right: 20px;
+  height: 40px;
+  font-size: 25px;
+  padding-left: 10px;
+  width: 25vw;
+}
+
+.input-author {
+  margin-right: 20px;
+  height: 40px;
+  font-size: 25px;
+  padding-left: 10px;
+  width: 25vw;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+}
+
+main > button {
+  height: 45px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.form button {
+  height: 45px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.form-headline {
+  text-transform: uppercase;
+  font-size: 25px;
+}
