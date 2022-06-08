@@ -1,18 +1,32 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/books';
 
-class AddBook extends PureComponent {
-  render() {
-    return (
-      <div>
-        <h2 className="form-headline">Add new book</h2>
-        <form className="form">
-          <input type="text" placeholder="Book title" className="input-title" />
-          <input type="text" placeholder="Author" className="input-author" />
-          <button type="submit">Add book</button>
-        </form>
-      </div>
-    );
-  }
-}
+const AddBook = () => {
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const title = e.target.title.value;
+    const author = e.target.author.value;
+    const form = document.querySelector('form');
+
+    if (title.trim() && author.trim()) {
+      dispatch(addBook(title, author));
+      form.reset();
+    }
+  };
+
+  return (
+    <>
+      <h2>Add new book</h2>
+      <form onSubmit={handleSubmit}>
+        <input type="text" id="title" className="input-title" placeholder="Book title" required />
+        <input type="text" id="author" className="input-author" placeholder="Author" required />
+        <button type="submit">Add book</button>
+      </form>
+    </>
+  );
+};
 
 export default AddBook;
