@@ -1,20 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { IoIosPerson } from 'react-icons/io';
 
 const Nav = () => (
-  <header className="container">
-    <div className="nav-bar-container container">
-      <div className="logo">Bookstore CMS</div>
-      <nav>
-        <ul className="nav-bar">
-          <li className="nav-bar-item">
-            <Link to="/" className="nav-bar-item-link">Books</Link>
-          </li>
-          <li className="nav-bar-item">
-            <Link to="/categories" className="nav-bar-item-link">Categories</Link>
-          </li>
-        </ul>
-      </nav>
+  <header className="header">
+    <div className="navbar container">
+      <div className="logo-nav">
+        <div className="logo">Bookstore CMS</div>
+        <nav>
+          <ul className="nav">
+            <li>
+              <NavLink to="/" className="nav-link">
+                Books
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/categories" className="nav-link">
+                Categories
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div className="user-box">
+        <IoIosPerson className="user" />
+      </div>
     </div>
   </header>
 );
